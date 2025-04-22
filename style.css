@@ -1,56 +1,93 @@
 body {
+  font-family: sans-serif;
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #f7f7f7;
+  padding: 0;
+  background-color: #f9f9f9;
 }
 
 .header {
+  background-color: white;
+  padding: 10px 15px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  background: white;
-  padding: 10px 20px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
-  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
 .logo {
-  height: 50px;
-  margin-right: 10px;
-}
-
-.title {
-  font-size: 16px;
-  margin: 0;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
   line-height: 1.2;
 }
 
-.menu-icon {
-  position: absolute;
-  right: 20px;
-  top: 20px;
+.menu-toggle {
+  font-size: 24px;
   cursor: pointer;
 }
 
-.menu-icon .bar {
-  width: 20px;
-  height: 3px;
-  background-color: purple;
-  margin: 4px 0;
-  border-radius: 2px;
-}
-
-.content {
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 6px rgba(0,0,0,0.1);
   padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
 }
 
-.card {
-  background: white;
+.nav-overlay.show {
+  right: 0;
+}
+
+.nav-overlay .close-btn {
+  font-size: 28px;
+  text-align: right;
+  color: #a200c8;
+  cursor: pointer;
+}
+
+.nav-overlay ul {
+  list-style: none;
+  padding: 20px 0 0 0;
+}
+
+.nav-overlay ul li {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.breadcrumb {
+  padding: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.biodata-box {
+  background-color: white;
+  margin: 10px 15px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.biodata-box h2 {
+  background: linear-gradient(90deg, #a900e1, #8c00ff);
+  color: white;
+  padding: 10px;
   border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 18px;
+  text-align: center;
 }
 
-.purple {
-  color: #6d28d9;
-  font-weight: bold;
+.biodata-box p {
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+.biodata-box strong {
+  font-weight: 600;
 }
