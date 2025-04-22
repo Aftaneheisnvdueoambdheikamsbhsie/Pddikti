@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Data Mahasiswa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Mahasiswa</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Header -->
   <header class="header">
-    <img src="Pddikti.jpg" alt="Logo PDDikti" class="logo">
-    <h1 class="title">Pangkalan Data<br>Pendidikan Tinggi</h1>
-    <div class="menu-icon">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+    <div class="logo">Pangkalan Data <br><strong>Pendidikan Tinggi</strong></div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#8942;</div>
   </header>
 
-  <!-- Konten utama -->
-  <main class="content">
-    <div class="card">
-      <p><strong>Nama</strong><br>PUTRI MERIANA</p>
-      <p><strong>Perguruan Tinggi</strong><br><span class="purple">Universitas Indraprasta PGRI</span></p>
-      <p><strong>Jenis Kelamin</strong><br>Laki-laki</p>
-      <p><strong>Tanggal Masuk</strong><br>12 September 2022</p>
-      <p><strong>NIM</strong><br>202243501355</p>
-      <p><strong>Jenjang - Program Studi</strong><br>Sarjana – <span class="purple">Teknik Informatika</span></p>
-      <p><strong>Status Awal Mahasiswa</strong><br>Peserta didik baru</p>
-      <p><strong>Status Terakhir Mahasiswa</strong><br><b>Aktif–2024/2025 Ganjil</b></p>
-    </div>
-  </main>
+  <!-- Navigation Overlay -->
+  <div id="navOverlay" class="nav-overlay">
+    <div class="close-btn" onclick="toggleMenu()">&#10006;</div>
+    <ul>
+      <li><a href="#">Tentang PDDikti &gt;</a></li>
+      <li><a href="#">Kebijakan Privasi</a></li>
+    </ul>
+  </div>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">Beranda &gt; Mahasiswa</div>
+
+  <!-- Biodata Section -->
+  <div class="biodata-box">
+    <h2>Biodata Mahasiswa</h2>
+    <p><strong>Nama</strong><br>MERIANA PUTRI</p>
+    <p><strong>Perguruan Tinggi</strong><br>Universitas Indraprasta PGRI</p>
+    <p><strong>Jenis Kelamin</strong><br>Laki-laki</p>
+    <p><strong>Tanggal Masuk</strong><br>12 September 2022</p>
+    <p><strong>NIM</strong><br>202243501355</p>
+    <p><strong>Jenjang - Program Studi</strong><br>Sarjana - Teknik Informatika</p>
+    <p><strong>Status Awal Mahasiswa</strong><br>Peserta didik baru</p>
+    <p><strong>Status Terakhir Mahasiswa</strong><br>Aktif - 2024/2025 Ganjil</p>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const overlay = document.getElementById("navOverlay");
+      overlay.classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
