@@ -1,50 +1,191 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biodata Mahasiswa</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PD Dikti</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f5f3fb;
+      color: #111;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background: white;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo span {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .hamburger {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+    }
+
+    .hamburger span {
+      height: 3px;
+      background-color: #a325d3;
+      border-radius: 2px;
+    }
+
+    nav {
+      display: none;
+      background: #fff;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      margin-bottom: 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #444;
+    }
+
+    .breadcrumbs {
+      font-size: 0.9rem;
+      padding: 1rem;
+    }
+
+    .breadcrumbs b {
+      color: #000;
+    }
+
+    .title-box {
+      background: linear-gradient(to right, #a325d3, #7e33ff);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin: 0 1rem;
+      border-radius: 16px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .content-box {
+      background: white;
+      margin: 0 1rem 2rem;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .content-box p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .label {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    .value {
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .highlight {
+      color: #7e33ff;
+    }
+
+    /* Toggle menu open */
+    .show {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
+
+  <header>
     <div class="logo">
-      <img src="Pddikti.jpg" alt="Logo PDDIKTI">
+      <img src="Pddikti.jpg" alt="Logo PDDIKTI" />
+      <span>Pangkalan Data Pendidikan Tinggi</span>
     </div>
-    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div> <!-- ikon bar -->
+    <div id="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
-  <!-- Navigation Overlay -->
-  <div id="navOverlay" class="nav-overlay">
-    <div class="close-btn" onclick="toggleMenu()">&#10005;</div> <!-- ikon silang -->
+  <nav id="nav-links">
     <ul>
-      <li><a href="#">Tentang PDDikti &gt;</a></li>
-      <li><a href="#">Kebijakan Privasi</a></li>
+      <li><a href="#">Beranda</a></li>
+      <li><a href="#">Mahasiswa</a></li>
+      <li><a href="#">Data Kampus</a></li>
     </ul>
+  </nav>
+
+  <div class="breadcrumbs">
+    Beranda > <b>Mahasiswa</b>
   </div>
 
-  <!-- Breadcrumb -->
-  <div class="breadcrumb">Beranda &gt; Mahasiswa</div>
+  <div class="title-box">
+    Biodata Mahasiswa
+  </div>
 
-  <!-- Biodata Section -->
-  <div class="biodata-box">
-    <h2>Biodata Mahasiswa</h2>
-    <p><strong>Nama</strong><br>MERIANA PUTRI</p>
-    <p><strong>Perguruan Tinggi</strong><br>Universitas Indraprasta PGRI</p>
-    <p><strong>Jenis Kelamin</strong><br>Laki-laki</p>
-    <p><strong>Tanggal Masuk</strong><br>12 September 2022</p>
-    <p><strong>NIM</strong><br>202243501355</p>
-    <p><strong>Jenjang - Program Studi</strong><br>Sarjana - Teknik Informatika</p>
-    <p><strong>Status Awal Mahasiswa</strong><br>Peserta didik baru</p>
-    <p><strong>Status Terakhir Mahasiswa</strong><br>Aktif - 2024/2025 Ganjil</p>
+  <div class="content-box">
+    <p><span class="label">Nama</span><br>
+       <span class="value">MERIANA PUTRI</span></p>
+    <p><span class="label">Perguruan Tinggi</span><br>
+       <span class="value highlight">Universitas Indraprasta PGRI</span></p>
+    <p><span class="label">Jenis Kelamin</span><br>
+       <span class="value">Laki-laki</span></p>
+    <p><span class="label">Tanggal Masuk</span><br>
+       <span class="value">12 September 2022</span></p>
+    <p><span class="label">NIM</span><br>
+       <span class="value">202243501355</span></p>
+    <p><span class="label">Jenjang - Program Studi</span><br>
+       <span class="value">Sarjana - <span class="highlight">Teknik Informatika</span></span></p>
+    <p><span class="label">Status Awal Mahasiswa</span><br>
+       <span class="value">Peserta didik baru</span></p>
+    <p><span class="label">Status Terakhir Mahasiswa</span><br>
+       <span class="value">Aktif - 2024/2025 Ganjil</span></p>
   </div>
 
   <script>
-    function toggleMenu() {
-      const overlay = document.getElementById("navOverlay");
-      overlay.classList.toggle("show");
-    }
+    const toggleButton = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
   </script>
+
 </body>
 </html>
