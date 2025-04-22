@@ -14,15 +14,12 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 }
 
-.logo {
-  color: black;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.2;
+.logo img {
+  height: 45px;
 }
 
 .menu-toggle {
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
 }
 
@@ -44,7 +41,7 @@ body {
 }
 
 .nav-overlay .close-btn {
-  font-size: 28px;
+  font-size: 20px;
   text-align: right;
   color: #a200c8;
   cursor: pointer;
