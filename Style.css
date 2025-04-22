@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f7f7f7;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.logo {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.menu-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  width: 20px;
+  height: 3px;
+  background-color: purple;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.purple {
+  color: #6d28d9;
+  font-weight: bold;
+}
